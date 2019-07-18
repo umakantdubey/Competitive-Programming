@@ -6,41 +6,38 @@ int main()
     cin>>t;
     while(t--)
     {
-
-
-        int n;
-        cin>>n;
-        int a,b;
-        cin>>b>>a;
-        int arr[n];
+        int n,a,b;
+        cin>>n>>a>>b;
+        int c1=0,c2=0;
         for(int i=0;i<n;i++)
         {
+            int x;
 
-            cin>>arr[i];
-        }
-        int k=0,k1=0;
-        for(int i=0;i<n;i++)
-        {
-
-            if(arr[i]%b==0)
+            cin>>x;
+            if(x%a==0)
             {
-
-                arr[i]--;
-                k++;
-                //break;
-                 if(arr[i]%a==0)
-           {
-               arr[i]--;
-               k1++;
-               break;
-
-           }
+                c1++;
+            }
+            if(x%b==0)
+            {
+                c2++;
+            }
+            if(x%a==0 && x%b==0)
+            {
+                c1++;
             }
 
         }
-        cout<<k<<k1<<endl;
+        if(c1>c2)
+            {
+                cout<<"BOB"<<endl;
+            }
+            else
+            {
+                cout<<"ALICE"<<endl;
+            }
+
 
     }
-
 
 }
