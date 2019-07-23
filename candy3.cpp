@@ -3,21 +3,21 @@ using namespace std;
 int main()
 {
 
-    int t;
+   long long  int t;
     cin>>t;
     while(t--)
     {
 
-        int n;
+      long long  int n;
         cin>>n;
         long long int sum =0;
         for(int i=0;i<n;i++)
         {
-int x;
+long long int x;
             cin>>x;
-            sum =sum+x;
+            sum =(sum+x)%n;
         }
-        if(sum%n==0)
+        if(sum==0)
         {
 
             cout<<"YES"<<endl;
