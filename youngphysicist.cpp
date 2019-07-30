@@ -2,8 +2,6 @@
 using namespace std;
 int main()
 {
-
-
     int t;
     cin>>t;
     int p=0,q=0,r=0;
